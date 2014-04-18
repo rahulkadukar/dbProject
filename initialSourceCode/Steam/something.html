@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script type="text/javascript" src="JavaScript/jquery.js"></script>
+		<script type="text/javascript" src="JavaScript/json2.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$.get("Functions/Sample.txt",function(data){
+					var game_array = JSON.parse(data);
+					console.log(game_array);
+					for(i in game_array.div.div){
+						var someth = game_array.div.div[i];
+						if(someth["-class"] == "achieveImgHolder"){
+							//$("#some").append("<tr><td>" + someth.img["-src"]);
+							}
+						else if(someth["-class"] == "achieveTxtHolder"){
+							console.log(someth);
+							$("#some").append("<tr><td>" + someth.div["3"]["h5"] + "</td></tr>");
+						}
+						else{
+							//$("#some").append("<tr><td>" + someth.img["-src"]);
+						}
+					}
+				});
+			});
+		</script>
+	</head>
+<body>
+<table id="some">
+</table>
+</body>
+</html>
