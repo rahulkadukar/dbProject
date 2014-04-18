@@ -1,0 +1,131 @@
+#enterData{
+	margin: auto;
+	margin-top: 50px;
+	width: 1000px;
+}
+
+#sourceURL{
+	width: 1000px;
+	font-size:1.1em;
+	font-family: 'Segoe UI';
+}
+
+#columns,#columnData,#back{
+	margin: auto;
+	margin-top: 20px;
+	width: 1000px;
+}
+
+.inputButton{
+	margin-top: 5px;
+	width: 200px;
+	height: 35px;
+	font-family: 'Segoe UI';
+}
+
+.remove{
+	text-align: right;
+}
+
+div.dataTables_wrapper{
+	margin: auto;
+	width: 1200px;
+	margin-top: 40px;
+}
+
+div.fg-toolbar, div.fg-toolbar{
+	background: #5e87b0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6facd5), to(#497bae));
+	background-image: -webkit-linear-gradient(#6facd5,#497bae);	
+}
+
+div.dataTables_length{
+	float: left;
+	padding: 6px;
+	width: 40%;
+	background: #4297d7;
+	font-family: 'Segoe UI';
+}
+
+div.dataTables_filter{
+	text-align: right;
+	padding: 8px;
+	background: #4297d7;
+	font-family: 'Segoe UI';
+}
+
+div.dataTables_processing{
+	display: none;
+}
+
+.dataTables_info{
+	float: left;
+	padding: 8px;
+	font-family: 'Segoe UI';
+	color: black;
+	font-size: 1em;
+}
+
+.dataTables_paginate{
+	text-align: right;
+	padding: 10px;
+	background: #4297d7;
+}
+
+a.paginate_button{
+	border-left: 1px solid #444444; 
+	border: 1px solid #8888ff; 
+	font-weight: normal; 
+	color: black;
+	font-size: 1em;
+	font-family: 'Segoe UI';
+	padding: 2px 7px;
+}
+
+a.paginate_active{
+	color: #5e87b0;
+	border-left: 1px solid #444444; 
+	border: 1px solid #8888ff; 
+	font-weight: normal; 
+	font-size: 1em;
+	font-family: 'Segoe UI';
+	padding: 2px 7px;
+}
+
+table{
+	width: 100%;
+}
+
+table tr td, table tr th{
+	color: white; 
+	background: #333333;
+	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	border-spacing: 0px;
+	border: #171717 solid 1px;
+	font-weight: normal;
+	font-size:1.1 em;
+}
+
+table tr th{	
+	color: #333333; 
+	background: #CC403E;
+}
+
+#footer{
+	position: fixed;
+    bottom: 0;
+	width: 100%;
+}
+
+#content{
+	padding-bottom: 50px; 
+}
+
+.name{
+	text-align: left;
+	width: 500px;
+}

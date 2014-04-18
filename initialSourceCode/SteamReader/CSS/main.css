@@ -1,0 +1,106 @@
+tr td:nth-of-type(1){
+	text-align:left;
+}
+
+td, th{
+	text-align:right;
+}
+
+div.dataTables_wrapper{
+	margin: auto;
+	width: 1000px;
+}
+
+div.fg-toolbar, div.fg-toolbar{
+	background: #5e87b0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6facd5), to(#497bae));
+	background-image: -webkit-linear-gradient(#6facd5,#497bae);	
+}
+
+div.dataTables_length{
+	float: left;
+	padding: 6px;
+	width: 40%;
+	display:none;
+}
+
+div.dataTables_filter{
+	text-align: right;
+	padding: 8px;
+}
+
+div.dataTables_processing{
+	display: none;
+}
+
+.dataTables_info{
+	float: left;
+	padding: 8px;
+	font-family: 'Segoe UI';
+	color: black;
+	font-size: 1em;
+}
+
+.dataTables_paginate{
+	text-align: right;
+	padding: 10px;
+}
+
+a.first,a.previous, a.next, a.last, a.fg-button{
+	border-left: 1px solid #444444; 
+	border: 1px solid #8888ff; 
+	font-weight: normal; 
+	color: black;
+	font-size: 1em;
+	font-family: 'Segoe UI';
+	padding: 2px 7px;
+}
+
+a.ui-state-disabled{
+	color: #5e87b0;
+	border-left: 1px solid #444444; 
+	border: 1px solid #8888ff; 
+	font-weight: normal; 
+	font-size: 1em;
+	font-family: 'Segoe UI';
+	padding: 2px 7px;
+}
+
+table{
+	width: 100%;
+}
+
+table tr td, table tr th{
+	color: white; 
+	background: #333333;
+	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	border-spacing: 0px;
+	border: #171717 solid 1px;
+	font-weight: normal;
+	font-size:1.1 em;
+}
+
+table tr th{
+	text-align: right;
+	color: #333333; 
+	background: #ffffff;
+}
+
+#footer{
+	position: fixed;
+    bottom: 0;
+	width: 100%;
+}
+
+#content{
+	padding-bottom: 50px; 
+}
+
+.name{
+	text-align: left;
+	width: 500px;
+}

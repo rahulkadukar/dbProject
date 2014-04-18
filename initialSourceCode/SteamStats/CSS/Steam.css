@@ -1,0 +1,455 @@
+﻿body{
+	font-size: 1.1em;
+	font-family: 'Segoe UI';
+	background: #888888;
+	margin: 0px;
+}
+
+text{
+	font-color:red;
+	font-size: 1.4em;
+}
+
+#header{
+	background: #5e87b0;
+	background-image: -webkit-gradient(linear,left top,left bottom,from( #6facd5 ),to( #497bae ));
+	background-image: -webkit-linear-gradient( #6facd5,#497bae );
+	background-image: -moz-linear-gradient( #6facd5,#497bae );
+	background-image: -ms-linear-gradient( #6facd5,#497bae );
+	background-image: -o-linear-gradient( #6facd5,#497bae );
+	background-image: linear-gradient( #6facd5,#497bae );
+	color: white;
+	font-family: Segoe UI;
+	font-size: 10px;
+	height: 36px;
+	text-align: center;
+	padding-top: 4px;
+}
+
+#titleText{
+	color: white;
+	font-family: 'Segoe UI';
+	font-size: 18px;
+}
+
+.headerButton{
+	background: #333333;
+	background-image: -webkit-gradient(linear,left top,left bottom,from( #444 ),to( #2d2d2d ));
+	background-image: -webkit-linear-gradient( #444,#2d2d2d );
+	background-image: -moz-linear-gradient( #444,#2d2d2d );
+	background-image: -ms-linear-gradient( #444,#2d2d2d );
+	background-image: -o-linear-gradient( #444,#2d2d2d );
+	background-image: linear-gradient( #444,#2d2d2d );
+	display: block;
+	color: white;
+	font-family: 'Segoe UI';
+	font-size: 16px;
+	width: 100px;
+	text-decoration: none;
+	height: 25px;
+	margin: 1px;
+	margin-left: 10px;
+	padding-top: 3px;
+}
+
+#dialog{
+	position: absolute;
+	width: 960px;
+	color: white;
+	height: 400px;
+	background-color: black;
+	margin: auto;
+	margin-top: 150px;
+	vertical-align:middle;
+	border: 2px solid #194b7e;
+}
+
+#uid{
+	background: #222222;
+	font-family: 'Segoe UI';
+	font-size: 18px;
+	width: 950px;
+	border: 0px solid #222222;
+	height: 30px;
+	padding: 5px;
+	margin-top: 10px;
+	color: #ffffff;
+}
+
+#submit{
+	background: #5e87b0;
+	background-image: -webkit-gradient(linear,left top,left bottom,from( #6facd5 ),to( #497bae ));
+	background-image: -webkit-linear-gradient( #6facd5,#497bae );
+	background-image: -moz-linear-gradient( #6facd5,#497bae );
+	background-image: -ms-linear-gradient( #6facd5,#497bae );
+	background-image: -o-linear-gradient( #6facd5,#497bae );
+	background-image: linear-gradient( #6facd5,#497bae );
+	border: 0px solid #222222;
+	color: white;
+	height: 40px;
+	font-size: 18px;
+	width: 960px;
+	border: 0px solid #222222;
+	padding: 5px;
+	margin-top: 10px;
+}
+
+#avatar{
+	border: 2px solid #194b7e;
+	height: 180px;
+	width: 180px;
+}
+
+#main{
+	width:960px;
+	border: 2px solid #000000;	
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:20px;
+	font-face:Segoe-UI;	
+}
+
+.someText{
+	width:935px;
+	border: 2px solid #194b7e;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:20px;
+	font-family:'Segoe UI';	
+}
+
+#content{
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#statsPicture{	
+	margin-top: 16px;
+	margin-right: 18px;
+}
+
+#statsSummary{	
+	width: 436px;
+	margin-top: 16px;
+	margin-right: 18px;
+}
+
+ul.list{
+	margin: 0px;
+	padding: 0px;
+}
+
+li.list{
+	display: block;
+	height: 25px;
+	padding: 5px;
+	border: 1px solid #111111;
+	border-top: 0px solid #111111;
+	background: #333333;
+	color: #ffffff;
+}
+
+.summaryList{
+	width: 422px;
+}
+
+#newPic{
+	margin-top: 16px;
+	width: 304px;
+	height: 180px;
+}
+
+#Top10GamesBar{
+	margin-right: 10px;
+	border: 2px solid #194b7e;
+}
+
+p.title{
+	font-family: Segoe UI;
+}
+
+p.quote{
+	padding: 10px;
+	border-top: 2px solid #000000;	
+	border-bottom: 2px solid #000000;	
+	text-align: center;
+	font-size:25px;
+}
+
+.ui-body-c{
+	font-family: Segoe UI;
+}
+
+.button{
+	width:400px;
+	border: 2px solid #000000;	
+	padding-left: 10px;
+	margin: 5px;
+	margin-left: 0px;
+	margin-bottom:20px;
+	height:40px;
+	font-size:25px;
+	font-face:Segoe-UI;
+}
+
+div.stats{
+	padding-left:20px;
+	margin: 100px;
+}
+
+.summaryHeader{
+	float: left;
+	width: 200px;
+}
+
+.summaryData{
+	float: left;
+	width: 100px;
+}
+
+.gameSummary{
+	display: none;
+	margin-top: 16px;
+}
+
+.barCharts, #games{
+	display:none;
+}
+
+#table{
+	margin-top: 20px;
+}
+
+table.table {
+	width: 960px;
+	border-spacing: 0px;
+}
+
+table.table th {
+	margin: 0px;
+	color: white; 
+	background: rgb(25, 23, 16);
+	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+	height: 20px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	border: #171717 solid 1px;
+	font-weight: normal;
+}
+
+table.table tr:hover td {
+    background: #194b7e;
+    background-image: -webkit-linear-gradient(top, rgb(95, 156, 197), rgb(57, 107, 158));
+	background: -moz-linear-gradient(top,#5F9CC5,? #396B9E);
+	background: linear-gradient(#5F9CC5, #396B9E) repeat scroll 0 0 #396B9E;
+}
+
+table.table tr td {
+	color: white; 
+	background: #333333;
+	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	border: #171717 solid 1px;
+	font-weight: normal;
+	font-size:1.1em;
+}
+
+table.table tr td:first-child {
+    padding-left: 20px;
+    text-align: left
+}
+
+thead tr .header{
+	background-image: url("images/none.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+thead tr .headerSortUp {
+	background-image: url("images/up.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+thead tr .headerSortDown {
+	background-image: url("images/down.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+img{
+	width: 300px;
+	height: 140px;
+	border: 2px solid #194b7e;
+}
+
+#favGame{
+	padding-top: 10px;
+	height: 28px;
+	margin-top: -10px;
+	background-color:#333;
+	border: 2px solid #194b7e;
+	width: 300px;
+}
+
+#prev, #next{
+	float: left;
+	width: 40px;
+	padding-left: 9px;
+	padding-right: 9px;
+	color: #4444ff;
+}
+
+#next{
+	text-align: right;
+}
+
+#print{
+	position: absolute;
+	width: 100px;
+}
+
+.remove{
+	text-align: right;
+}
+
+div.dataTables_wrapper{
+	margin: auto;
+	width: 945px;
+	margin-top: 40px;
+}
+
+div.fg-toolbar, div.fg-toolbar{
+	background: #5e87b0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6facd5), to(#497bae));
+	background-image: -webkit-linear-gradient(#6facd5,#497bae);	
+}
+
+div.dataTables_length{
+	float: left;
+	padding: 2px;
+	width: 40%;
+	background: #4297d7;
+	font-family: 'Segoe UI';
+}
+
+div.dataTables_filter{
+	text-align: right;
+	padding: 2px;
+	background: #4297d7;
+	font-family: 'Segoe UI';
+}
+
+div.dataTables_processing{
+	display: none;
+}
+
+.dataTables_info{
+	float: left;
+	padding: 4px;
+	font-family: 'Segoe UI';
+	color: black;
+	font-size: 1em;
+}
+
+.dataTables_paginate{
+	text-align: right;
+	padding: 10px;
+	background: #4297d7;
+}
+
+a.paginate_button{
+	border-left: 1px solid #444444; 
+	border: 1px solid #8888ff; 
+	font-weight: normal; 
+	color: black;
+	font-size: 1em;
+	font-family: 'Segoe UI';
+	padding: 2px 7px;
+}
+
+a.paginate_active{
+	color: #5e87b0;
+	border-left: 1px solid #444444; 
+	border: 1px solid #8888ff; 
+	font-weight: normal; 
+	font-size: 1em;
+	font-family: 'Segoe UI';
+	padding: 2px 7px;
+}
+
+table{
+	width: 100%;
+}
+
+table tr td, table tr th{
+	color: white; 
+	background: #333333;
+	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	border-spacing: 0px;
+	border: #171717 solid 1px;
+	font-weight: normal;
+	font-size:1.1 em;
+}
+
+table tr th{	
+	color: #333333; 
+	background: #CC403E;
+}
+
+#footer{
+	position: fixed;
+    bottom: 0;
+	width: 100%;
+}
+
+#content{
+	padding-bottom: 50px; 
+}
+
+.name{
+	text-align: left;
+	width: 500px;
+}
+
+.dataTables_wrapper, #games_wrapper{
+	margin: 0px;
+}
+
+#games_filter{
+	width: 956px;
+}
+
+#games_paginate{
+	width: 950px;
+	padding: 5px;
+}
+
+.right{ 
+	text-align: right;
+}
+
+option, select{
+	font-family: 'Segoe UI';
+	font-size: 0.9em;
+}
+
+#stdText{
+	color: white;
+}
