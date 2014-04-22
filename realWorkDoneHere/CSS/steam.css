@@ -1,0 +1,89 @@
+body{
+	font-size: 1.1em;
+	font-family: 'Segoe UI';
+	background: #888888;
+	margin: 0px;
+}
+
+text{
+	
+	font-size: 1.4em;
+}
+
+#header{
+	background: #5e87b0;
+	background-image: -webkit-gradient(linear,left top,left bottom,from( #6facd5 ),to( #497bae ));
+	background-image: -webkit-linear-gradient( #6facd5,#497bae );
+	background-image: -moz-linear-gradient( #6facd5,#497bae );
+	background-image: -ms-linear-gradient( #6facd5,#497bae );
+	background-image: -o-linear-gradient( #6facd5,#497bae );
+	background-image: linear-gradient( #6facd5,#497bae );
+	color: white;
+	font-family: Segoe UI;
+	font-size: 10px;
+	height: 36px;
+	text-align: center;
+	padding-top: 4px;
+}
+
+#titleText{
+	color: white;
+	font-family: 'Segoe UI';
+	font-size: 18px;
+}
+
+#content{
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#uid{
+	background: #222222;
+	font-family: 'Segoe UI';
+	font-size: 18px;
+	width: 950px;
+	border: 0px solid #222222;
+	height: 30px;
+	padding: 5px;
+	margin-top: 10px;
+	color: #ffffff;
+}
+
+#submit{
+	background: #5e87b0;
+	background-image: -webkit-gradient(linear,left top,left bottom,from( #6facd5 ),to( #497bae ));
+	background-image: -webkit-linear-gradient( #6facd5,#497bae );
+	background-image: -moz-linear-gradient( #6facd5,#497bae );
+	background-image: -ms-linear-gradient( #6facd5,#497bae );
+	background-image: -o-linear-gradient( #6facd5,#497bae );
+	background-image: linear-gradient( #6facd5,#497bae );
+	border: 0px solid #222222;
+	color: white;
+	height: 40px;
+	font-size: 18px;
+	width: 960px;
+	border: 0px solid #222222;
+	padding: 5px;
+	margin-top: 10px;
+}
+
+
+.someText{
+	width:935px;
+	border: 2px solid #194b7e;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:20px;
+	font-family:'Segoe UI';	
+}
+
+.errorMessage{
+	color: #cd0a0a;
+	border: 2px solid #cd0a0a;
+	background: #fef1ec;
+}
