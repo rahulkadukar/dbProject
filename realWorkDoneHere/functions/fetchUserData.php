@@ -46,7 +46,7 @@ if($resultStatus['http_code'] == 200){
 		$sql = "UPDATE `valve`.`user_master` SET `lastUpdate` = '".date('U')."' WHERE `steamID` = ".$uid;
 		$result = $link->query($sql);
 	
-		$sql = "INSERT IGNORE INTO `valve`.`user_data` (`steamID`, `realName`, `personaname`, `location`, `profileurl`, `timecreated`, `avatarfull`, `type`) VALUES ('".$userData["userData"]["steamid"]."','".$userData["userData"]["realname"]."','".$userData["userData"]["personaname"]."','".$userData["userData"]["location"]."','".$userData["userData"]["profileurl"]."','".$userData["userData"]["timecreated"]."','".$userData["userData"]["avatarfull"]."','2');";
+		$sql = "INSERT IGNORE INTO `valve`.`user_data` (`steamID`, `realName`, `personaname`, `location`, `profileurl`, `timecreated`, `avatarfull`, `type`) VALUES ('".$userData["userData"]["steamid"]."','".$link->real_escape_string($userData["userData"]["realname"])."','".$link->real_escape_string($userData["userData"]["personaname"])."','".$userData["userData"]["location"]."','".$link->real_escape_string($userData["userData"]["profileurl"])."','".$userData["userData"]["timecreated"]."','".$userData["userData"]["avatarfull"]."','2');";
 		$result = $link->query($sql);
 
 		$count++;
@@ -87,7 +87,7 @@ if($resultStatus['http_code'] == 200){
 }
 
 if($final == 3){
-	$sql = "INSERT IGNORE INTO `valve`.`user_data` (`steamID`, `realName`, `personaname`, `location`, `profileurl`, `timecreated`, `avatarfull`, `type`) VALUES ('".$userData["userData"]["steamid"]."','".$userData["userData"]["realname"]."','".$userData["userData"]["personaname"]."','".$userData["userData"]["location"]."','".$userData["userData"]["profileurl"]."','".$userData["userData"]["timecreated"]."','".$userData["userData"]["avatarfull"]."','1');";
+	$sql = "INSERT IGNORE INTO `valve`.`user_data` (`steamID`, `realName`, `personaname`, `location`, `profileurl`, `timecreated`, `avatarfull`, `type`) VALUES ('".$userData["userData"]["steamid"]."','".$link->real_escape_string($userData["userData"]["realname"])."','".$link->real_escape_string($userData["userData"]["personaname"])."','".$userData["userData"]["location"]."','".$link->real_escape_string($userData["userData"]["profileurl"])."','".$userData["userData"]["timecreated"]."','".$userData["userData"]["avatarfull"]."','1');";
 	$result = $link->query($sql);
 	
 	$sql = "INSERT INTO `valve`.`user_games` (`steamID`, `appID`, `playtime`) VALUES ";
