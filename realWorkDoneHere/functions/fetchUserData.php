@@ -3,7 +3,7 @@
 include 'database.php';		
 $key 	= 'FCCAA3E90D04C71D59EAD2822B2AF90B';
 $count = 0;
-$aql = "SELECT `steamID` FROM `user_master` WHERE `lastUpdate` = 0 LIMIT 0,25";
+$aql = "SELECT `steamID` FROM `user_master` WHERE `lastUpdate` = 0 LIMIT 0,1000";
 $dataFrom = $link->query($aql);
 while($rows = $dataFrom->fetch_array())
 {
