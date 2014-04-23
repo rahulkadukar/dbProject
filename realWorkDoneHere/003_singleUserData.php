@@ -64,6 +64,11 @@
 										finalData.friendData = friend_data.friendslist.friends;
 										console.log(finalData);
 									});
+									
+							/* Now push the data into the database */
+									$.get('functions/pushSingleData.php'),{'data': finalData },function(userdata){
+										console.log("Pushing Data");
+									});
 							}
 						else{
 							showError("It seems that the ID that you have entered is incorrect. Please try with a proper ID");
