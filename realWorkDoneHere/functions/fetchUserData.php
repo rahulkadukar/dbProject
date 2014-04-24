@@ -1,9 +1,11 @@
 <?php
+// mark the start time
+$start_time = MICROTIME(TRUE);
 /* The one script to rule them all */
 include 'database.php';		
 $key 	= 'FCCAA3E90D04C71D59EAD2822B2AF90B';
 $count = 0;
-$aql = "SELECT `steamID` FROM `user_master` WHERE `lastUpdate` = 0 LIMIT 0,1000";
+$aql = "SELECT `steamID` FROM `user_master` WHERE `lastUpdate` = 0 ORDER BY RAND() LIMIT 0,1000";
 $dataFrom = $link->query($aql);
 while($rows = $dataFrom->fetch_array())
 {
@@ -12,7 +14,6 @@ $uid = $rows[0];
 $userData = [];
 $final = 0;
 $url = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002?steamids=".$uid."&key=".$key;
-	
 $curl = curl_init($url);	
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);                         
 curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_ANY);                                            
@@ -71,7 +72,6 @@ if($resultStatus['http_code'] == 200){
 }
 
 $url = "http://api.steampowered.com/ISteamUser/GetFriendList/v1?steamid=".$uid."&key=".$key;
-	
 $curl = curl_init($url);	
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);                         
 curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_ANY);                                            
@@ -120,5 +120,15 @@ if($final == 3){
 }
 }
 
-echo $count." entries were updated";
+echo $count." entries were updated ";
+ 
+// ...function or processing code...
+ 
+// mark the stop time
+$stop_time = MICROTIME(TRUE);
+ 
+// get the difference in seconds
+$time = $stop_time - $start_time;
+ 
+PRINT "Elapsed time was $time seconds.";
 ?>
