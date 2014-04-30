@@ -1,9 +1,10 @@
 <?php
 /* The one script to rule them all */
 include 'database.php';		
-$key 	= 'FCCAA3E90D04C71D59EAD2822B2AF90B';
-$uid 	= $_GET['steamID'];
+$key 		= 'FCCAA3E90D04C71D59EAD2822B2AF90B';
+$friend 	= $_GET['userData'];
 //$uid = '76561198025011263';
+echo $friend;
 $userData = [];
 
 	$url = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002?steamids=".$uid."&key=".$key;

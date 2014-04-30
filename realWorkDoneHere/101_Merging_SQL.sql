@@ -21,8 +21,7 @@ INNER JOIN `merge`.`user_master` AS b
 ON a.`steamID` = b.`steamID`
 WHERE b.`lastUpdate` <> 0;
 
-DELETE a.* FROM `valve`.`user_master` AS a
-INNER JOIN `merge`.`user_master` AS b 
+DELETE a.* FROM `merge`.`user_master` AS a
+INNER JOIN `valve`.`user_master` AS b 
 ON a.`steamID` = b.`steamID`
-WHERE a.`lastUpdate` = 0
-AND b.`lastUpdate` = 0;
+WHERE a.`lastUpdate` = 0;

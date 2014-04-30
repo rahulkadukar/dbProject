@@ -24,51 +24,19 @@
 							else{
 							/* At this part we have confirmed the existence of the user and now we want to fetch information pertaining to this user */
 								$.get('functions/userData.php',{'steamID': user_array.profile.steamID64,},function(userdata){
-									user_data = JSON.parse(userdata);
-									finalData.userData.avatarfull 	= "No picture";
-									finalData.userData.location   	= "Unknown";
-									finalData.userData.personaname 	= "Not provided";
-									finalData.userData.realname 	= "Not provided";
-																				
-									if(user_data.response.players[0].hasOwnProperty('avatarfull'))
-										finalData.userData.avatarfull = user_data.response.players[0].avatarfull;
+									userData = JSON.parse(userdata);
+									var friendsData = [];
+									var friend = {};
+									for(i in userData.friendData)
+										friendsData.push(userData.friendData[i].steamid);
 									
-									if(user_data.response.players[0].hasOwnProperty('loccountrycode'))
-										finalData.userData.location = user_data.response.players[0].loccountrycode;
-																		
-									if(user_data.response.players[0].hasOwnProperty('personaname'))
-										finalData.userData.personaname = user_data.response.players[0].personaname;
-
-									if(user_data.response.players[0].hasOwnProperty('realname'))
-										finalData.userData.realname = user_data.response.players[0].realname;
-
-									if(user_data.response.players[0].hasOwnProperty('steamid'))
-										finalData.userData.steamid = user_data.response.players[0].steamid;
-
-									if(user_data.response.players[0].hasOwnProperty('profileurl'))
-										finalData.userData.profileurl = user_data.response.players[0].profileurl;
-
-									if(user_data.response.players[0].hasOwnProperty('timecreated'))
-										finalData.userData.timecreated = user_data.response.players[0].timecreated;
+									friend = JSON.stringify(friendsData);
+									console.log(friend);
+									console.log(friendsData);
+									$.get('functions/fetchAll.php',{'friendsData': friendsData},function(userdata){
+									
+									});
 								});
-
-							/* Get a list of all the games owned by the user */
-									$.get('functions/gameData.php',{'steamID': user_array.profile.steamID64,},function(userdata){
-										game_data = JSON.parse(userdata);
-										finalData.gameData = game_data.response.games;
-									});
-
-							/* Get a list of all the friends*/
-									$.get('functions/friendData.php',{'steamID': user_array.profile.steamID64,},function(userdata){
-										friend_data = JSON.parse(userdata);
-										finalData.friendData = friend_data.friendslist.friends;
-										console.log(finalData);
-									});
-									
-							/* Now push the data into the database */
-									$.get('functions/pushSingleData.php'),{'data': finalData },function(userdata){
-										console.log("Pushing Data");
-									});
 							}
 						else{
 							showError("It seems that the ID that you have entered is incorrect. Please try with a proper ID");

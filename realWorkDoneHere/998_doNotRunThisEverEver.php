@@ -1,7 +1,7 @@
 <?php
 //Use only for testing purposes and delete when done do not run this file
-	$uid = $_GET['a'];
-	if($uid != '25')
+	$uid = $_GET['b'];
+	if($uid != '35')
 		exit;
 		
 	error_reporting(E_ALL ^ E_NOTICE);
