@@ -25,17 +25,14 @@
 							/* At this part we have confirmed the existence of the user and now we want to fetch information pertaining to this user */
 								$.get('functions/userData.php',{'steamID': user_array.profile.steamID64,},function(userdata){
 									userData = JSON.parse(userdata);
-									var friendsData = [];
+									console.log(userdata);
+									/*var friendsData = [];
 									var friend = {};
 									for(i in userData.friendData)
 										friendsData.push(userData.friendData[i].steamid);
 									
 									friend = JSON.stringify(friendsData);
-									console.log(friend);
-									console.log(friendsData);
-									$.get('functions/fetchAll.php',{'friendsData': friendsData},function(userdata){
-									
-									});
+									console.log(friend);*/
 								});
 							}
 						else{
