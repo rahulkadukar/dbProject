@@ -11,4 +11,7 @@ SELECT DISTINCT(`appID`) FROM `game_master` WHERE `appID` NOT IN (SELECT `appID`
 SELECT `appID`, SUM(`playtime`) FROM user_games GROUP BY `appID`
 SELECT `location`, COUNT(*) FROM user_data  WHERE `type` = 1 GROUP BY `location`
 
-SELECT a.`location`, b.`appID`, SUM(`playtime`) FROM `user_data` AS a JOIN `user_games` AS b ON a.`steamID` = b.`steamID` WHERE `playtime` <> 0 GROUP BY `location`, `appID`
+SELECT x.`location`, x.`appID`, MAX(playtime) FROM  (
+SELECT a.`location`, b.`appID`, SUM(`playtime`) AS playtime FROM `user_data` AS a JOIN `user_games` AS b ON a.`steamID` = b.`steamID` WHERE `playtime` <> 0 GROUP BY `location`, `appID` ) AS x WHERE x.`appID GROUP BY location
+
+SELECT a.`location`, b.`appID`, SUM(`playtime`) AS playtime FROM `user_data` AS a JOIN `user_games` AS b ON a.`steamID` = b.`steamID` WHERE `playtime` <> 0 GROUP BY `location`, `appID`
