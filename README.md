@@ -3,4 +3,4 @@ dbProject
 
 Database project
 
-Initial build, please ignore anything written here and if possible do not make changes to this code.
+Initial build, please ignore anything written here and if possible do not make changes to this code. Please follow this
